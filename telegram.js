@@ -1,12 +1,12 @@
 const TelegramBot = require('node-telegram-bot-api');
 
 const WunderlistApi = require('./api');
-const config = require('./config');
+const {WUNDERLIST_CLIENT_ID, WUNDERLIST_ACCESS_TOKEN, TELEGRAM_BOT_TOKEN} = process.env;
 
 // uses 'polling' to fetch new updates
-const bot = new TelegramBot(config.telegram.botToken, {polling: true});
+const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, {polling: true});
 
-const wunderlistApi = new WunderlistApi(config.wunderlist.clientId, config.wunderlist.accessToken);
+const wunderlistApi = new WunderlistApi(WUNDERLIST_CLIENT_ID, WUNDERLIST_ACCESS_TOKEN);
 
 (async function() {
     const inbox = await wunderlistApi.getInbox();
