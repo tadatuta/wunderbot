@@ -1,0 +1,16 @@
+{
+  "name": "wunderbot",
+  "version": "1.0.0",
+  "description": "Telegram bot which creates a new Wunderlist task for any message it gets.",
+  "main": "telegram.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["telegram", "wunderlist", "bot", "telegram bot", "wunderlist api"],
+  "author": "Vladimir Grinenko <i@tadatuta.com>",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^9.6.0",
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
